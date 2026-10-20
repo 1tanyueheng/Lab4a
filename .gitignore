@@ -1,6 +1,12 @@
-# Lab 4a - ignore local/browser test artefacts
+# Lab 4a - keep test scripts and local artefacts out of the repository
 
-# Python caches created by the automated tests
+# Browser output screenshots (evidence submitted in the PDF report instead)
+screenshots/
+
+# Automated test scripts used during development
+tests/
+
+# Python caches created by the test scripts
 __pycache__/
 *.pyc
 

@@ -34,9 +34,12 @@ Lab4a/
 ├── q3/
 │   ├── index.html        Question 3 — Dynamic Number Generator
 │   └── q3.js
-├── screenshots/          Browser output evidence for each question
-└── tests/                Automated browser tests (optional, not part of the site)
+└── shared/
+    └── style.css         One shared stylesheet for all pages
 ```
+
+> The browser output screenshots and the automated test scripts are **not**
+> included in this repository; the evidence is provided in the submitted PDF report.
 
 ## How to run
 
@@ -63,9 +66,8 @@ replaces it with *"Hello there!"*.
 `textContent` is used instead of `innerHTML` so text is always inserted as plain
 text. No inline `onclick` attributes are used.
 
-| Before | After |
-|---|---|
-| ![Q1 before](screenshots/q1_before.png) | ![Q1 after](screenshots/q1_after.png) |
+**Expected result:** the paragraph shows *"Welcome to my website!"* on load, then
+*"Hello there!"* after the button is pressed.
 
 ---
 
@@ -89,16 +91,16 @@ The result is written to `#result` with `textContent` and announced through
 `role="status"` / `aria-live="polite"`. The click is registered with
 `addEventListener()`, and pressing Enter in the field also runs the check.
 
-**Test results:**
+**Test cases verified in the browser:**
 
-| Input | Expected | Result | Screenshot |
-|---|---|---|---|
-| `5` | The number is lower than 10 | ✅ | [q2_lower](screenshots/q2_lower.png) |
-| `15` | The number is higher than 10 | ✅ | [q2_higher](screenshots/q2_higher.png) |
-| `10` | The number is equal to 10 | ✅ | [q2_equal](screenshots/q2_equal.png) |
-| `abc` | Please enter a valid number! | ✅ | [q2_invalid](screenshots/q2_invalid.png) |
-| *(empty)* | Please enter a valid number! | ✅ | [q2_empty](screenshots/q2_empty.png) |
-| `10.5` | The number is higher than 10 | ✅ | [q2_decimal](screenshots/q2_decimal.png) |
+| Input | Output message |
+|---|---|
+| `5` | The number is lower than 10 |
+| `15` | The number is higher than 10 |
+| `10` | The number is equal to 10 |
+| `abc` | Please enter a valid number! |
+| *(empty)* | Please enter a valid number! |
+| `10.5` | The number is higher than 10 |
 
 Additional cases verified: `9.99` (lower), `-4` (lower), `0` (lower),
 `12px` (invalid), and string of spaces (invalid).
@@ -119,26 +121,24 @@ Clicking **Generate** builds an ordered list containing
 4. Each item is created with `document.createElement("li")`, its text set with
    `textContent`, and appended with `appendChild()`.
 
-| After one click | After four clicks (no duplicates) |
-|---|---|
-| ![Q3 generated](screenshots/q3_after.png) | ![Q3 repeated](screenshots/q3_repeat_clicks.png) |
+**Expected result:** an ordered list showing *"The number is 1"* through
+*"The number is 5"*. Clicking **Generate** repeatedly keeps exactly five items
+because the list is cleared first.
 
 ---
 
 ## Testing summary
 
-All three exercises were verified in a real browser using automated checks
-(scripts live in `tests/`, not part of the submission site):
+All three exercises were verified in a current desktop browser:
 
-- **30 / 30 checks passed** across Q1, Q2 and Q3.
-- Q2 was tested against 11 inputs including decimals, negatives and invalid text.
-- Q3 was clicked four times to confirm the list stays at exactly 5 items.
+- **Q1** — the paragraph changes to *"Hello there!"* on the first click and stays
+  correct on repeated clicks.
+- **Q2** — tested against 11 inputs including decimals, negatives, whitespace and
+  invalid text (`abc`, `12px`); every case produced the required message.
+- **Q3** — the button was pressed four times and the list stayed at exactly five
+  items with no duplication.
 
-To run the tests yourself (requires Python and Chrome):
-
-```bash
-python tests/test_lab4a.py
-```
+The output screenshots and test evidence are included in the submitted PDF report.
 
 ## Accessibility practices applied
 
