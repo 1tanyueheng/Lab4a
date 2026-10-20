@@ -3,46 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Lab 4a Question 2 - Smart Number Validator. Validates numeric input and reports whether it is below, above or equal to 10.">
-    <meta name="author" content="Tan Yue Heng (AI240167)">
-    <title>Q2 &mdash; Smart Number Validator | Lab 4a</title>
-
+    <title>Q2 &mdash; Smart Number Validator</title>
     <link rel="stylesheet" href="../shared/style.css">
 </head>
 
 <body>
-<div class="wrap">
 
-    <a class="back-link" href="../index.html">&larr; Back to Lab 4a home</a>
+<h1>Question 2 &mdash; Smart Number Validator</h1>
 
-    <main class="card">
-        <span class="eyebrow">Lab 4a &middot; Question 2</span>
-        <h1>Smart Number Validator</h1>
-        <p class="lede">
-            Type a number and press <strong>Check</strong>. The page validates the input
-            and reports whether it is lower than, higher than or equal to 10.
-            Decimals such as 10.5 are accepted.
-        </p>
+<label for="userInput">Enter a number:</label>
+<input type="text" id="userInput" placeholder="Enter a number">
+<button id="checkBtn" type="button">Check</button>
 
-        <hr class="divider">
-
-        <!-- Required starting markup -->
-        <div class="field">
-            <label for="userInput">Enter a number:</label>
-            <input type="text" id="userInput" placeholder="Enter a number"
-                   inputmode="decimal" autocomplete="off">
-        </div>
-
-        <div class="actions">
-            <button id="checkBtn" type="button" class="btn btn-primary">Check</button>
-            <button id="resetBtn" type="button" class="btn btn-ghost">Clear</button>
-        </div>
-
-        <p id="result" role="status" aria-live="polite"></p>
-    </main>
-
-</div>
+<p id="result" role="status" aria-live="polite"></p>
 
 <script src="q2.js" defer></script>
+
 </body>
 </html>

@@ -18,6 +18,10 @@ The exercises cover functions, event handling with `addEventListener()`, input
 validation with `if … else if … else`, a `for` loop, and DOM manipulation using
 `createElement()` / `textContent` / `appendChild()`.
 
+The pages are kept deliberately simple and use a plain **W3Schools-style** look:
+white page, light-grey output panels, the green `#04AA6D` buttons and a green
+heading rule.
+
 ## Repository structure
 
 ```
