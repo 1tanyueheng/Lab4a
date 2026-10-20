@@ -34,12 +34,8 @@ Lab4a/
 ├── q3/
 │   ├── index.html        Question 3 — Dynamic Number Generator
 │   └── q3.js
-└── shared/
-    └── style.css         One shared stylesheet for all pages
+└── screenshots/          Browser output evidence for each question
 ```
-
-> The browser output screenshots and the automated test scripts are **not**
-> included in this repository; the evidence is provided in the submitted PDF report.
 
 ## How to run
 
@@ -49,6 +45,8 @@ Lab4a/
 
 > No build step, server or installation is required. The pages are opened
 > straight from the file system.
+
+![Lab 4a landing page](screenshots/index.png)
 
 ---
 
@@ -68,6 +66,10 @@ text. No inline `onclick` attributes are used.
 
 **Expected result:** the paragraph shows *"Welcome to my website!"* on load, then
 *"Hello there!"* after the button is pressed.
+
+| Before clicking | After clicking **Change Message** |
+|---|---|
+| ![Q1 before](screenshots/q1_before.png) | ![Q1 after](screenshots/q1_after.png) |
 
 ---
 
@@ -93,17 +95,29 @@ The result is written to `#result` with `textContent` and announced through
 
 **Test cases verified in the browser:**
 
-| Input | Output message |
-|---|---|
-| `5` | The number is lower than 10 |
-| `15` | The number is higher than 10 |
-| `10` | The number is equal to 10 |
-| `abc` | Please enter a valid number! |
-| *(empty)* | Please enter a valid number! |
-| `10.5` | The number is higher than 10 |
+| Input | Output message | Screenshot |
+|---|---|---|
+| `5` | The number is lower than 10 | [view](screenshots/q2_lower.png) |
+| `15` | The number is higher than 10 | [view](screenshots/q2_higher.png) |
+| `10` | The number is equal to 10 | [view](screenshots/q2_equal.png) |
+| `abc` | Please enter a valid number! | [view](screenshots/q2_invalid.png) |
+| *(empty)* | Please enter a valid number! | [view](screenshots/q2_empty.png) |
+| `10.5` | The number is higher than 10 | [view](screenshots/q2_decimal.png) |
 
 Additional cases verified: `9.99` (lower), `-4` (lower), `0` (lower),
 `12px` (invalid), and string of spaces (invalid).
+
+| Lower than 10 | Higher than 10 |
+|---|---|
+| ![Q2 lower](screenshots/q2_lower.png) | ![Q2 higher](screenshots/q2_higher.png) |
+
+| Equal to 10 | Invalid input (`abc`) |
+|---|---|
+| ![Q2 equal](screenshots/q2_equal.png) | ![Q2 invalid](screenshots/q2_invalid.png) |
+
+| Empty input | Decimal `10.5` |
+|---|---|
+| ![Q2 empty](screenshots/q2_empty.png) | ![Q2 decimal](screenshots/q2_decimal.png) |
 
 ---
 
@@ -125,6 +139,14 @@ Clicking **Generate** builds an ordered list containing
 *"The number is 5"*. Clicking **Generate** repeatedly keeps exactly five items
 because the list is cleared first.
 
+| Before clicking | After clicking **Generate** |
+|---|---|
+| ![Q3 before](screenshots/q3_before.png) | ![Q3 after](screenshots/q3_after.png) |
+
+| After four clicks — still five items, no duplicates |
+|---|
+| ![Q3 repeated clicks](screenshots/q3_repeat_clicks.png) |
+
 ---
 
 ## Testing summary
@@ -138,7 +160,7 @@ All three exercises were verified in a current desktop browser:
 - **Q3** — the button was pressed four times and the list stayed at exactly five
   items with no duplication.
 
-The output screenshots and test evidence are included in the submitted PDF report.
+The output screenshots for every question are included above.
 
 ## Accessibility practices applied
 
