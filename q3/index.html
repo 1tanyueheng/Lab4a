@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lab 4a Question 3 - Dynamic Number Generator. Builds an ordered list from 1 to 5 with a for loop and DOM methods.">
+    <meta name="author" content="Tan Yue Heng (AI240167)">
+    <title>Q3 &mdash; Dynamic Number Generator | Lab 4a</title>
+
+    <link rel="stylesheet" href="../shared/style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+    <a class="back-link" href="../index.html">&larr; Back to Lab 4a home</a>
+
+    <main class="card">
+        <span class="eyebrow">Lab 4a &middot; Question 3</span>
+        <h1>Dynamic Number Generator</h1>
+        <p class="lede">
+            Press <strong>Generate</strong> to build an ordered list from 1 to 5.
+            Each item is created with <code>document.createElement()</code>. Pressing it
+            again replaces the list instead of duplicating it.
+        </p>
+
+        <hr class="divider">
+
+        <!-- Required starting markup -->
+        <div class="actions">
+            <button id="generateBtn" type="button" class="btn btn-primary">Generate</button>
+        </div>
+
+        <ol id="numberList" aria-label="Generated numbers"></ol>
+
+        <!-- Visible status region for accessibility -->
+        <p id="status" role="status" aria-live="polite">
+            No numbers generated yet.
+        </p>
+    </main>
+
+</div>
+
+<script src="q3.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Lab 4a - ignore local/browser test artefacts
+
+# Python caches created by the automated tests
+__pycache__/
+*.pyc
+
+# Temporary Chrome profile used by the test scripts
+.chrome-test-profile/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
